@@ -28,13 +28,13 @@ public class JobController {
     }
 
     @PutMapping("/{id}")
-    public void updateUser(@PathVariable String id, @RequestBody Job job) {
+    public void updateJob(@PathVariable String id, @RequestBody Job job) {
         job.setId(id);
         jobRepository.update(job);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable String id) {
+    public void deleteJob(@PathVariable String id) {
         jobRepository.delete(id);
     }
 
